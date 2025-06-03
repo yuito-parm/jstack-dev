@@ -21,17 +21,23 @@
                 if (fishList != null && !fishList.isEmpty()) {
                     for (Fish fish : fishList) {
             %>
-            <td><%= fish.fishName %></td>
-            <td><%= fish.price %></td>
-            <td><%= fish.feature %></td>
-            <td><%= fish.status %></td>
-            <td><%= fish.stock %></td>
-            <td>
-                <form action="edit" method="get">
-                    <input type="hidden" name="index" value="<%= fishList.indexOf(fish) %>">
-                    <input type="submit" value="編集">
-                </form>
-            </td>
+            <tr>
+                <td><%= fish.fishName %></td>
+                <td><%= fish.price %></td>
+                <td><%= fish.feature %></td>
+                <td><%= fish.status %></td>
+                <td><%= fish.stock %></td>
+                <td>
+                    <form action="edit" method="get" style="display:inline;">
+                        <input type="hidden" name="index" value="<%= fishList.indexOf(fish) %>">
+                        <input type="submit" value="編集">
+                    </form>
+                    <form action="delete" method="post" style="display:inline;">
+                        <input type="hidden" name="index" value="<%= fishList.indexOf(fish) %>">
+                        <input type="submit" value="削除">
+                    </form>
+                </td>
+            </tr>
             <%
                     }
                 } else {

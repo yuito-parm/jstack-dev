@@ -15,4 +15,20 @@ public class Fish {
         this.status = status;
         this.stock = stock;
     }
+
+    public void setFishName(String fishName) {
+        this.fishName = fishName;
+    }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public void setFeature(String feature) {
+        this.feature = feature;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
 }
