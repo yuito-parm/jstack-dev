@@ -3,7 +3,7 @@
 <web-app>
     <servlet>
         <servlet-name>FishListServlet</servlet-name>
-        <servlet-class>FishListServlet</servlet-class>
+        <servlet-class>controller.FishListServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FishListServlet</servlet-name>
@@ -12,10 +12,19 @@
 
     <servlet>
         <servlet-name>AddFishServlet</servlet-name>
-        <servlet-class>AddFishServlet</servlet-class>
+        <servlet-class>controller.AddFishServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddFishServlet</servlet-name>
         <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditFishServlet</servlet-name>
+        <servlet-class>controller.EditFishServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditFishServlet</servlet-name>
+        <url-pattern>/edit</url-pattern>
     </servlet-mapping>
 </web-app>

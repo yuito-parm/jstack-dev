@@ -1,11 +1,11 @@
+package controller;
+
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.io.*;
 import java.util.*;
-import model.Fish;
 
 public class AddFishServlet extends HttpServlet {
-    private static List<Fish> fishList = new ArrayList<>();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -21,12 +21,12 @@ public class AddFishServlet extends HttpServlet {
 
         Fish fish = new Fish(fishName, price, feature, status, stock);
 
+        List<Fish> fishList = FishListServlet.getFistList();
+
         fishList.add(fish);
 
         res.sendRedirect("list");
     }
 
-    public static List<Fish> getFistList() {
-        return fishList;
-    }
+
 }

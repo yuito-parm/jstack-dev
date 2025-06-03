@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.List" %>
-<%@ page import="model.Fish" %>
+<%@ page import="controller.Fish" %>
 <html>
     <head>
         <title>リスト一覧</title>
@@ -14,6 +14,7 @@
                 <th>特徴</th>
                 <th>状態</th>
                 <th>在庫数</th>
+                <th>編集/削除</th>
             </tr>
             <%
                 List<Fish> fishList = (List<Fish>)request.getAttribute("fishList");
@@ -25,6 +26,12 @@
             <td><%= fish.feature %></td>
             <td><%= fish.status %></td>
             <td><%= fish.stock %></td>
+            <td>
+                <form action="edit" method="get">
+                    <input type="hidden" name="index" value="<%= fishList.indexOf(fish) %>">
+                    <input type="submit" value="編集">
+                </form>
+            </td>
             <%
                     }
                 } else {
