@@ -2,11 +2,20 @@
 
 <web-app>
     <servlet>
-        <servlet-name>ListServlet</servlet-name>
-        <servlet-class>Step01_ListServlet</servlet-class>
+        <servlet-name>FishListServlet</servlet-name>
+        <servlet-class>FishListServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ListServlet</servlet-name>
+        <servlet-name>FishListServlet</servlet-name>
         <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddFishServlet</servlet-name>
+        <servlet-class>AddFishServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddFishServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
     </servlet-mapping>
 </web-app>
