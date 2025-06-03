@@ -2,6 +2,7 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.io.*;
 import java.util.*;
+import model.Fish;
 
 public class AddFishServlet extends HttpServlet {
     private static List<Fish> fishList = new ArrayList<>();
